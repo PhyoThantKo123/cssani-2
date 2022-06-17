@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keyframe Intro</title>
+	<style type="text/css">
+		body{
+			margin: 0;
+		}
+		div{
+			width: 150px;
+			height: 150px;
+			background-color: red;
+
+			animation-name: myani;
+			animation-duration: 3s;
+		}
+		/*@keyframes myani{
+			0%{
+				transform: translate(1000px);
+			}
+			50%{
+				transform: translate(0px);
+			}
+			100%{
+				transform: translate(1000px,500px);
+			}
+		}*/
+		@keyframes myani{
+			0%{
+				transform: translate(1000px);
+			}
+			50%{
+				transform: translate(0,200px);
+			}
+			75%{
+				transform: translate(1000px,200px);
+			}
+			100%{
+				transform: translate(0,600px);
+			}
+		}
+	</style>
+</head>
+<body>
+  <div></div>
+</body>
+</html>

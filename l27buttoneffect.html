@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Effect</title>
+	<style type="text/css">
+		body{
+			background-color: #222;
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			overflow: hidden;
+		}
+		button{
+			background-color: orange;
+			color: #fff;
+
+			font-size: 22px;
+			text-transform: uppercase;
+
+			cursor: pointer;
+
+			padding: 12px 40px;
+			border: none;
+
+			position: relative;
+		}
+		button::before{
+			content: '';
+
+			width: 24px;
+			height: 24px;
+
+			position: absolute;
+			top: -5px;
+			left: -5px;
+			background-color: red;
+
+			border-top: 2px solid orange;
+			border-left: 2px solid orange;
+
+			transition: all 0.3s linear;
+		}
+		button::after{
+			content: '';
+
+			width: 24px;
+			height: 24px;
+			
+			position: absolute;
+			right: -5px;
+			bottom: -5px;
+			background-color: blue;
+
+			border-bottom: 2px solid orange;
+			border-right: 2px solid orange;
+
+			transition: all 0.3s linear;
+		}
+		button:hover::before,button:hover::after{
+			width: 100%;
+			height: 100%;
+		}
+	</style>
+</head>
+<body>
+	<button>hover me</button>
+</body>
+</html>

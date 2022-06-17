@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	
+	<title>Button Effect</title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+		.btn{
+			background:none;
+			padding: 40px 80px;
+			font-size: 45px;
+			border: 2px solid tomato;
+			color: tomato;
+			text-transform: uppercase;
+			cursor: pointer;
+			position: relative;
+			transition: all 1s linear;
+			overflow: hidden;
+		}
+		.btn::before{
+			content: '';
+
+			width: 100%;
+			height: 0%;
+			background-color:tomato ;
+
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: -1;
+
+			border-radius: 0 0 40% 40%;
+			transition: all 1s linear;
+			
+		}
+		.btn:hover{
+			color: #fff;
+		}
+		.btn:hover::before{
+			height: 200%;
+		}
+	</style>
+</head>
+<body>
+   <button class="btn">button</button>
+</body>
+</html>

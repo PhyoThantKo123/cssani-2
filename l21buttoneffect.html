@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Button Effect</title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+			font-family: sans-serif;
+
+			background-color: #222;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			overflow: hidden;
+		}
+		a{
+			text-decoration: none;
+			font-size: 45px;
+			color: #fff;
+
+			text-transform: uppercase;
+			letter-spacing: 2px;
+
+			background-color: orange;
+			padding: 40px 80px;
+
+			position: relative;
+		}
+		a::before{
+			content: 'BUTTON';
+
+			width: 100%;
+			height: 100%;
+
+			background-color:green ;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			
+
+			transform: rotateX(270deg);
+			transform-origin: top;
+			transition: all 0.5s linear;
+		}
+		a::after{
+		    content: 'button';
+
+			width: 100%;
+			height: 100%;
+
+			background-color:red ;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index:;
+
+			transform: rotateX(270deg);
+			transform-origin: top;
+			transition: all 0.5s linear;
+			transition-delay: 0.25s;
+		}
+		a:hover::before,a:hover::after{
+			transform: rotateX(0deg);
+		}
+	</style>
+</head>
+<body>
+   <a href="#">Button</a>
+</body>
+</html>

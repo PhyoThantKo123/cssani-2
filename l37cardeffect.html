@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Card Effect</title>
+	<style type="text/css">
+		body{
+			height: 100vh;
+			background-color: #555;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			/*overflow: hidden;*/
+		}
+		.container{
+			width: 450px;
+			height: 300px;
+
+			position: relative;
+			overflow: hidden;
+		}
+		img{
+			width: 100%;
+			height: 100%;
+		}
+		.container::before{
+			content: '';
+
+			width: 120%;
+			height: 200%;
+			background-color: #222;
+			position: absolute;
+			top:100%;
+			left: 100%;
+
+			opacity: 0.8;
+			transform: rotate(40deg);
+			transition: all 0.3s linear;
+			transition-delay: 0.65s;
+		}
+		.caption{
+			width: 100%;
+			height: 100%;
+
+			color: #fff;
+			text-transform: uppercase;
+			text-align: center;
+
+			position: absolute;
+			top: 0;
+			left: 0;
+
+			display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+
+		}
+		.container:hover::before{
+			top: -40%;
+			left: -15%;
+			transition-delay: 0.01s;
+		}
+		.caption h2{
+			padding: 20px;
+			font-size: 17px;
+			background-color: rgba(0, 0, 0, 0.7);
+
+			transform: translate(200px,-200px);
+			transition: all 0.5s linear;
+			transition-delay: 0.5s;
+		}
+		.caption p{
+			width: 80%;
+			/*margin: auto;*/
+			align-self: center;
+
+			transform: translate(-200px,200px);
+			transition: all 0.5s linear;
+			transition-delay: 0.3s;
+		}
+		.caption a{
+			width: 100px;
+
+			text-decoration: none;
+			background-color: #000;
+			color: #fff;
+
+			padding: 15px;
+			align-self: center;
+
+			transform: translateY(100px);
+			transition: all 0.5s linear;
+			transition-delay: 0.1s;
+
+		}
+		.container:hover h2,.container:hover p,.container:hover a{
+			transform: translate(0,0);
+		}
+		.container:hover h2{
+			transition-delay: 0.1s;
+		}
+		.container:hover p{
+			transition-delay: 0.3s;
+		}
+		.container:hover a{
+			transition-delay: 0.5s;
+		}
+
+		
+
+	</style>
+</head>
+<body>
+    <div class="container">
+    	<img src="./img/webdep.jpg" alt="web" />
+    	<div class="caption">
+    		<h2>HOW SWEET !</h2>
+    		<p>lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy</p>
+    		<a href="#">read more</a>
+    	</div>
+    </div>
+</body>
+</html>
